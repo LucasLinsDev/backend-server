@@ -13,7 +13,7 @@ app.use(express.json());
 app.get('/',async(req,res)=>{
   
 
-const url='https://travellog.myvtex.com/api/oms/pvt/orders?q=1246930501700-01';
+const url=`https://${process.env.CASA}.myvtex.com/api/oms/pvt/orders?q=1246930501700-01`;
 
   try{
     const response=await axios.get(url,{
